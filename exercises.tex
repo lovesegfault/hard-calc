@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -10,160 +10,189 @@
 
 \section{Induction Proofs}
 \begin{ExerciseList}
-    \Exercise
-    Show that for any $n\in\mathbb N_1$
-    $$\frac{1}{1 \cdot 3}+\frac{1}{3 \cdot 5}+\ldots+\frac{1}{(2n-1)(2n+1)}=\frac{n}{2n+1}$$
+	\Exercise
+	Show that for any $n\in\mathbb N_1$
+	$$\frac{1}{1 \cdot 3}+\frac{1}{3 \cdot 5}+\ldots+\frac{1}{(2n-1)(2n+1)}=\frac{n}{2n+1}$$
 
-    \Exercise
-    Consider the sequence $(a_n)$ defined by
-    \[
-    \begin{cases}
-        a_1=6,\\
-        a_{n+1}  = \frac{a_n}{3}(1-e^{-a_n^2}), & \mbox{if $n\ge 1$}\\
-    \end{cases}
-    \]
-    \Question{Show that $a_n\in (0,6]$ for any $n\in\mathbb N_1$}
-    \Question{Show that the sequence is decreasing}
-    \Question{Prove that the sequence is convergent and determine it's limit}
+	\Exercise
+	Consider the sequence $(a_n)$ defined by
+	\[
+		\begin{cases}
+			a_1=6,\\
+			a_{n+1}  = \frac{a_n}{3}(1-e^{-a_n^2}), & \mbox{if $n\ge 1$} \\
+		\end{cases}
+	\]
+	\Question{Show that $a_n\in (0,6]$ for any $n\in\mathbb N_1$}
+	\Question{Show that the sequence is decreasing}
+	\Question{Prove that the sequence is convergent and determine it's limit}
 
-    \Exercise
-    Consider a sequence $(b_n)$ defined by
-    \[
-    \begin{cases}
-        b_1=\frac{1}{2},\\
-        b_{n+1}  = b_n(b_n - 1) + 1, & \mbox{if $n\ge 1$}\\
-    \end{cases}
-    \]
-    \Question{Show that $b_n\in (0,1)$ for any $n\ge 1$}
-    \Question{Show that the sequence is increasing}
-    \Question{Prove that the sequence is convergent and determine it's limit}
+	\Exercise
+	Consider a sequence $(b_n)$ defined by
+	\[
+		\begin{cases}
+			b_1=\frac{1}{2},\\
+			b_{n+1}  = b_n(b_n - 1) + 1, & \mbox{if $n\ge 1$} \\
+		\end{cases}
+	\]
+	\Question{Show that $b_n\in (0,1)$ for any $n\ge 1$}
+	\Question{Show that the sequence is increasing}
+	\Question{Prove that the sequence is convergent and determine it's limit}
 
-    \Exercise
-    Consider the sequence $(u_n)$ defined by
-    \[
-    \begin{cases}
-        u_1=1,\\
-        u_{n+1}  = 1 + \frac{u_n}{2}, & \mbox{if $n\ge 1$}\\
-    \end{cases}
-    \]
-    \Question{Show that $u_n \le 2$ for any $n\in\mathbb N_1$}
-    \Question{Show that the sequence is increasing}
-    \Question{Prove that the sequence is convergent and determine it's limit}
+	\Exercise
+	Consider the sequence $(u_n)$ defined by
+	\[
+		\begin{cases}
+			u_1=1,\\
+			u_{n+1}  = 1 + \frac{u_n}{2}, & \mbox{if $n\ge 1$} \\
+		\end{cases}
+	\]
+	\Question{Show that $u_n \le 2$ for any $n\in\mathbb N_1$}
+	\Question{Show that the sequence is increasing}
+	\Question{Prove that the sequence is convergent and determine it's limit}
 
-    \Exercise
-    Let $\alpha\in [0,1]$, consider the sequence $(b_n)$ given by
-    \[
-    \begin{cases}
-        b_1=\alpha,\\
-        b_{n+1}  = b_n - b_n^4, & \mbox{if $n\ge 1$}\\
-    \end{cases}
-    \]
-    \Question{Show that $b_n$ is monotonically decreasing}
-    \Question{Show that $b_n\in [0,1]\forall n\in\mathbb N_1$}
-    \Question{Prove that $b_n$ is convergent and calculate $\lim b_n$}
+	\Exercise
+	Let $\alpha\in [0,1]$, consider the sequence $(b_n)$ given by
+	\[
+		\begin{cases}
+			b_1=\alpha,\\
+			b_{n+1}  = b_n - b_n^4, & \mbox{if $n\ge 1$} \\
+		\end{cases}
+	\]
+	\Question{Show that $b_n$ is monotonically decreasing}
+	\Question{Show that $b_n\in [0,1]\forall n\in\mathbb N_1$}
+	\Question{Prove that $b_n$ is convergent and calculate $\lim b_n$}
 
-    \Exercise
-    Consider the sequence $(a_n)$ defined by
-    \[
-    \begin{cases}
-        a_1=1,\\
-        a_{n}  = \frac{3a_{n-1}}{n}, & \mbox{if $n\ge 2$}\\
-    \end{cases}
-    \]
-    Show that
-    $$a_n=\frac{3^{n-1}}{n!}\quad\quad\forall n\ge 1$$
+	\Exercise
+	Consider the sequence $(a_n)$ defined by
+	\[
+		\begin{cases}
+			a_1=1,\\
+			a_{n}  = \frac{3a_{n-1}}{n}, & \mbox{if $n\ge 2$} \\
+		\end{cases}
+	\]
+	Show that
+	$$a_n=\frac{3^{n-1}}{n!}\quad\quad\forall n\ge 1$$
 \end{ExerciseList}
 
 \section{Limits I}
 \begin{ExerciseList}
-    \Exercise Calculate or show that it does not exist in $\overline{\mathbb R}$
-    \Question $\lim \frac{(n+1)!-n!}{n!(n+2)}$
-    \Question $\lim (-1)^n \frac{10^n}{n!}$
-    \Question $\lim \frac{5n!+5n}{n^n + 2}$
-    \Question $\lim \sqrt{\frac{e^n+2}{n!}}$
-    \Question $\lim \frac{(-1)^n n}{n!+4}$
-    \Question $\lim \frac{\sqrt[3]{n+4}}{\sqrt[3]{n}+4}$
-    \Question $\lim \sqrt[n]{\frac{n+2^n}{2+5^n}}$
-    \Question $\lim \frac{3n^4-2n}{(n^2 + 3)(1+5n^2)}$
-    \Question $\lim (\frac{2}{3}+\cos(3n\pi))^n$
-    \Question $\lim \frac{3+\cos(e^{-n})}{n+\sqrt{n!}}$
-    \Question $\lim \frac{(-1)^n n }{n! + 5}$
-    \Question $\lim \frac{\cos{(n\pi)}}{\sin{(1/n\pi)}+1}$
-    \Question $\lim \frac{e^{3n}+1}{2^n+n^2}$
-    \Question $\lim \frac{\sqrt{n} + n^3}{(n+\sqrt{n})(n^2 + n^{3/2})}$
-    \Question $\lim (\cos{(\frac{\pi}{4}+n\pi)}+1)^n$
-    \Question $\lim \frac{(3n)!}{n!(2n)!}$
-    \Question $\lim \frac{\arccos(1/n)}{\cos(\pi/n)}$
-    \Question $\lim \frac{2n! + 3^n}{n^{50} + n!}$
-    \Question $\lim \sqrt[n]{\frac{\arctan n}{1+e^n}}$
+	\Exercise Calculate or show that it does not exist in $\overline{\mathbb R}$
+	\Question $\lim \frac{(n+1)!-n!}{n!(n+2)}$
+	\Question $\lim (-1)^n \frac{10^n}{n!}$
+	\Question $\lim \frac{5n!+5n}{n^n + 2}$
+	\Question $\lim \sqrt{\frac{e^n+2}{n!}}$
+	\Question $\lim \frac{(-1)^n n}{n!+4}$
+	\Question $\lim \frac{\sqrt[3]{n+4}}{\sqrt[3]{n}+4}$
+	\Question $\lim \sqrt[n]{\frac{n+2^n}{2+5^n}}$
+	\Question $\lim \frac{3n^4-2n}{(n^2 + 3)(1+5n^2)}$
+	\Question $\lim (\frac{2}{3}+\cos(3n\pi))^n$
+	\Question $\lim \frac{3+\cos(e^{-n})}{n+\sqrt{n!}}$
+	\Question $\lim \frac{(-1)^n n }{n! + 5}$
+	\Question $\lim \frac{\cos{(n\pi)}}{\sin{(1/n\pi)}+1}$
+	\Question $\lim \frac{e^{3n}+1}{2^n+n^2}$
+	\Question $\lim \frac{\sqrt{n} + n^3}{(n+\sqrt{n})(n^2 + n^{3/2})}$
+	\Question $\lim (\cos{(\frac{\pi}{4}+n\pi)}+1)^n$
+	\Question $\lim \frac{(3n)!}{n!(2n)!}$
+	\Question $\lim \frac{\arccos(1/n)}{\cos(\pi/n)}$
+	\Question $\lim \frac{2n! + 3^n}{n^{50} + n!}$
+	\Question $\lim \sqrt[n]{\frac{\arctan n}{1+e^n}}$
 \end{ExerciseList}
 
 \section{Limits II}
 \begin{ExerciseList}
-    \Exercise Calculate or show that it does not exist in $\overline{\mathbb R}$
-    \Question $\lim_{x\to 0}\frac{e^x - 1}{x-e^{3x} + 1}$
-    \Question $\lim_{x\to +\infty}(3x^2+1)^{1/x}$
+	\Exercise Calculate or show that it does not exist in $\overline{\mathbb R}$
+	\Question $\lim_{x\to 0}\frac{e^x - 1}{x-e^{3x} + 1}$
+	\Question $\lim_{x\to +\infty}(3x^2+1)^{1/x}$
+	\Question $\lim_{x\to 1}\frac{x-1}{\tan(x-1)}$
+	\Question $\lim_{x\to 2}(x-1)^{\frac{1}{2-x}}$
 \end{ExerciseList}
 
 \section{Functions}
 \begin{ExerciseList}
-    \Exercise Consider the function $f\colon \mathbb R \to \mathbb R$
-    $$f(x) = \begin{cases} -x e^x, & \mbox{if $x<0$} \\ \alpha\arctan(x^2-2x), &\mbox{if $x\ge 0$} \\ \end{cases}$$
-    Where $\alpha$ is a real constant.
-    \Question Calculate $\lim_{x\to -\infty}f(x)$ and $\lim_{x\to +\infty}f(x)$
-    \Question Justify whether $f$ is continuous
-    \Question Let $f'_+(0)=-2\alpha$, determine $\alpha$ such that $f$ is differentiable at $x=0$. Justify that $f$ is differentiable in $\mathbb R$ and calculate it's derivative
-    \Question Determine the local extremes and the monotonous intervals of $f$ (with $\alpha = 1/2$)
-    \Question Indicate the co-domain of $f$ (with $\alpha=1/2$)
+	\Exercise Consider the function $f\colon \mathbb R \to \mathbb R$
+	$$f(x) = \begin{cases} -x e^x, & \mbox{if $x<0$} \\ \alpha\arctan(x^2-2x), &\mbox{if $x\ge 0$} \\ \end{cases}$$
+	Where $\alpha$ is a real constant.
+	\Question Calculate $\lim_{x\to -\infty}f(x)$ and $\lim_{x\to +\infty}f(x)$
+	\Question Justify whether $f$ is continuous
+	\Question Let $f'_+(0)=-2\alpha$, determine $\alpha$ such that $f$ is differentiable at $x=0$. Justify that $f$ is differentiable in $\mathbb R$ and calculate it's derivative
+	\Question Determine the local extremes and the monotonous intervals of $f$ (with $\alpha = 1/2$)
+	\Question Indicate the co-domain of $f$ (with $\alpha=1/2$)
 
-    \Exercise The function $h\colon \mathbb R \to \mathbb R$
-    $$h(x)=\begin{cases}x^2, & \mbox{if $x\in\mathbb Q$} \\ 0, & \mbox{if $x\in\mathbb R\setminus\mathbb Q$}\end{cases}$$
-    is continuous at only one point. Is it differentiable at that point?
+	\Exercise The function $h\colon \mathbb R \to \mathbb R$
+	$$h(x)=\begin{cases}x^2, & \mbox{if $x\in\mathbb Q$} \\ 0, & \mbox{if $x\in\mathbb R\setminus\mathbb Q$}\end{cases}$$
+	is continuous at only one point. Is it differentiable at that point?
+
+	\Exercise Consider the function $f\colon \mathbb R\setminus\{0\}\to\mathbb R$
+	$$f(x) = \begin{cases} \frac{e^{-x}}{x+1}, & \mbox{if $x>0$} \\ 2+\log(1-x), & \mbox{if $x<0$} \\ \end{cases}$$
+	\Question Show that $f$ is continuous. Will $f$ be extensible by continuity on the point $x=0$?
+	\Question Calculate in $\overline{\mathbb R}$
+	$$\lim_{x\to -\infty}f(x), \qquad \lim_{x\to -\infty}f(x)$$
+	\Question Show that $f$ is differentiable, and calculate $f'(x)\quad\forall x\in\mathbb R\setminus \{ 0\}$.
+	Use the result to determine the monotonous intervals of $f$
+	\Question Determine the co-domain of $f$
 \end{ExerciseList}
 
 \section{Primitives}
 \begin{ExerciseList}
-    \Exercise Calculate the primitive of the function $$\frac{2x+3}{x^2+2}$$ that vanishes at $x=0$
+	\Exercise Calculate the primitive of the function $$\frac{2x+3}{x^2+2}$$ that vanishes at $x=0$
 
-    \Exercise Determine a primitive for the following functions:
-    \Question $\frac{1}{\sqrt{e^x - 1}}$
+	\Exercise Determine a primitive for the following functions:
+	\Question $\frac{1}{\sqrt{e^x - 1}}$
+	\Question $\frac{3x}{1+x^4}$
+	\Question $\frac{3x}{\sqrt{4+x^2}}$
 \end{ExerciseList}
 
 \section{Integration}
 \begin{ExerciseList}
-    \Exercise Calculate the area of the following subset of $\mathbb R^2$
-    $$\{(x,y)\in\mathbb R^2 \colon x\le y\le -x^2+2\}$$
+	\Exercise Calculate the area of the following subset of $\mathbb R^2$
+	$$\{(x,y)\in\mathbb R^2 \colon x\le y\le -x^2+2\}$$
+	\Exercise Calculate the area of the region delimited by
+	$$\{ (x,y)\in\mathbb R^2 \colon 0\le x\le 1,\frac{\pi}{4}x\le y\le\arctan x \}$$
+	\Exercise Compute the following integrals
+	\Question $\int_0^{\frac{\pi}{2}}\frac{\sin x \cos x}{2+\sin^2x}dx$
+	\Exercise Determine the value of the constant $c\in\mathbb R$ such that $f'(0) = 0$, with
+	$$f(x)=\int_x^{cx+2}{e^{-t^2}}dt$$
 \end{ExerciseList}
 
 \section{Taylor Polynomial}
 \begin{ExerciseList}
-    \Exercise Let $f\in C^2(\mathbb R)$ and $g(x)=f(e^x)\forall x\in\mathbb R$.
-    Let $3-x+2(x-1)^2$ be the second order Taylor polynomial of $f$ relative
-    to point $1$, determine the second order MacLaurin polynomial of $g$.
+	\Exercise Let $f\in C^2(\mathbb R)$ and $g(x)=f(e^x)\forall x\in\mathbb R$.
+	Let $3-x+2(x-1)^2$ be the second order Taylor polynomial of $f$ relative
+	to point $1$, determine the second order MacLaurin polynomial of $g$.
 \end{ExerciseList}
 \section{Series}
 \begin{ExerciseList}
-    \Exercise Analyse the following series and determine whether they are absolutely convergent, conditionally convergent, or divergent
-    \Question $\sum_{n=1}^{+\infty}\frac{1}{3+2n}$
-    \Question $\sum_{n=1}^{+\infty}\frac{\cos(2n)}{n^3}$
-    \Question $\sum_{n=1}^{+\infty}\frac{n^3}{e^{2n}}$
-    \Exercise Show that if the series $\sum_{n=1}^{+\infty}a_n$ converges, then
-    $\sum_{n=1}^{+\infty}\frac{2n-1}{2n}$ also converges.
+	\Exercise Analyse the following series and determine whether they are absolutely convergent, conditionally convergent, or divergent
+	\Question $\sum_{n=1}^{+\infty}\frac{1}{3+2n}$
+	\Question $\sum_{n=1}^{+\infty}\frac{\cos(2n)}{n^3}$
+	\Question $\sum_{n=1}^{+\infty}\frac{n^3}{e^{2n}}$
+	\Question $\sum_{n=1}^{\infty}\frac{2+n\sqrt{n}}{1+3n^4}$
+	\Question $\sum_{n=2}^{\infty}\frac{3^n(1+(-1)^n)}{(2\pi)^{n+1}}$
+	\Exercise Show that if the series $\sum_{n=1}^{+\infty}a_n$ converges, then
+	$\sum_{n=1}^{+\infty}\frac{2n-1}{2n}$ also converges.
 \end{ExerciseList}
 
 \section{Proofs}
 \begin{ExerciseList}
-    \Exercise Show that for any $x>0$
-    $$\frac{x}{1+x} < \log(1+x) < x$$
-    Hint: Mean Value Theorem
+	\Exercise Show that for any $x>0$
+	$$\frac{x}{1+x} < \log(1+x) < x$$
+	Hint: Mean Value Theorem
 
-    \Exercise Let $h\in C(\mathbb R)$ such that $h(x) = h(x+2)$ for all $x\in\mathbb R$, and
-    $$\phi(x) = \int_0^x{h(t)dt}-\int_0^{x+2}{h(t)dt}$$
-    Prove that $\phi$ is identically null if and only if $\int_0^2 h(t)dt = 0$
+	\Exercise Let $h\in C(\mathbb R)$ such that $h(x) = h(x+2)$ for all $x\in\mathbb R$, and
+	$$\phi(x) = \int_0^x{h(t)dt}-\int_0^{x+2}{h(t)dt}$$
+	Prove that $\phi$ is identically null if and only if $\int_0^2 h(t)dt = 0$
+
+	\Exercise Let $(a_n)$ be a limited sequence with terms in $(1,+\infty)$, and
+	$(b_n)$ another sequence such that $$b_n = \frac{na_n}{n+a_n}\qquad n\in\mathbb N_1$$
+	Show that $(b_n)$ has convergent subsequences.
+
+	\Exercise Let $f$ and $g$ be real functions, defined and continuous on the interval $[a,b]$, such that
+	$$\int_a^b{f(t)}dt = 2\int_a^b{g(t)}dt$$
+	Show that there is $c\in[a,b]$ such that $f(c)=2g(c)$
 \end{ExerciseList}
 \section{Notation}
 \begin{enumerate}
-    \item  $[a,b]$ for a closed interval, $(a,b)$ for an open one.
-    \item $\overline{\mathbb R} = \mathbb R \cup \{-\infty, +\infty\}$
+	\item  $[a,b]$ for a closed interval, $(a,b)$ for an open one.
+	\item $\overline{\mathbb R} = \mathbb R \cup \{-\infty, +\infty\}$
 \end{enumerate}
 \end{document}

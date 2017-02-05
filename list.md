@@ -6,3 +6,4 @@
 -   2016.1-A
 ###### Done
 -   CDI_exame_VA_2S_2014
+-   CDI_exame_VA_2012
