@@ -1,6 +1,4 @@
 ###### Doing
--   2013.1-A
--   2013.2-A
 -   2014.1-A
 -   2015.1-A
 -   2016.1-A
@@ -8,3 +6,5 @@
 -   CDI_exame_VA_2S_2014
 -   CDI_exame_VA_2012
 -   CDI_exame_VA_2013_14
+-   CDI_Exame_VA_2013
+-   CDI_Exame_VA_2014_15

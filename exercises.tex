@@ -108,6 +108,10 @@
 	\Question $\lim_{x\to -\infty}xe^{x^2}$
 	\Question $\lim_{x\to +\infty}(\log(2x))^{1/x}$
 	\Question $\lim_{x\to 1}\frac{1}{x-1}\int_0^{\log x}{e^{\sin t}}dt$
+	\Question $\lim_{x\to 0}(x^2 + 1)^{\frac{1}{x^2}}$
+	\Question $\lim_{x\to1+}\frac{\arctan(x-1)}{x^3-3x+2}$
+	\Question $\lim_{x\to 0}\frac{\arctan{2x}}{\tan x}$
+	\Question $\lim_{x\to +\infty}(2e^x + 1)^{\frac{1}{x}}$
 \end{ExerciseList}
 
 \section{Functions}
@@ -142,6 +146,21 @@
 	\Question Show that $f$ has one and only one local extremum on the interval $(-\infty, 0)$.
 	Prove that it's an absolute minimum of $f$ in $\mathbb R$.
 	\Question Show that the co-domain of $f$ is a closed and limited interval.
+
+	\Exercise Given a function $f\colon \mathbb R\setminus\{ 0 \} \to \mathbb R$ such that
+	$$f(x)=\begin{cases}\alpha + \log{\frac{1}{1+x^2}} & \mbox{if $x<0$} \\ \arctan{\frac{1}{x}} & \mbox{if $x>0$} \\ \end{cases}$$
+	\Question Calculate, if it exists, $\lim_{x\to -\infty}$ and $\lim_{x\to +\infty}$
+	\Question Determine $\alpha\in\mathbb R$ such that $f$ is extensible by continuity at $x=0$
+	\Question Determine the domain of differentiability of $f$, and calculate it's derivative.
+	\Question Determine the monotony intervals of $f$, as well as it's extrema, if they exist.
+	\Question Assuming $\alpha=0$, what will be the co-domain of $f$?
+
+	\Exercise Consider the function $f\colon\mathbb R\setminus\{ -\pi/2,\pi/2 \}\to\mathbb R$ given by
+	$$f(x)=\begin{cases}\frac{\pi}{2(\sin{x}+1)}, & \mbox{if $|x| < \pi/2$} \\ \arctan(e^{x-\pi/2}), & \mbox{if $|x|>\pi/2$} \\ \end{cases}$$
+	\Question Study $f$ with regards to continuity.
+	\Question Calculate $\lim_{x\to -\infty}f(x)$ and $\lim_{x\to +\infty}f(x)$
+	\Question Decide whether $f$ extendable by continuity at $-\pi/2$ and $\pi/2$
+	\Question Calculate the derivative $f'$, and determine it's monotonous intervals.
 \end{ExerciseList}
 
 \section{Primitives}
@@ -152,30 +171,43 @@
 	\Question $\frac{1}{\sqrt{e^x - 1}}$
 	\Question $\frac{3x}{1+x^4}$
 	\Question $\frac{3x}{\sqrt{4+x^2}}$
+	\Question $\frac{1}{x^2+4}$
+	\Question $\frac{\sin{\sqrt[3]{x}}}{\sqrt[3]{x}}$
 
 	\Exercise Determine the function $g\colon \mathbb R \to \mathbb R$ that satisfies
 	$$\begin{cases}g'(x)=\frac{3x^2 + 1}{x^2 + 2} & \mbox{$\forall x\in \mathbb R$} \\ g(0)=2\end{cases}$$
+
+	\Exercise Calculate the function $f\colon \mathbb R\to\mathbb R$ that satisfies
+	$$\forall x\in\mathbb R\quad f'(x)=\frac{1+x}{9+x^2}\quad\mbox{and}\quad f(0)=\log(3)$$
+
+	\Exercise Write the general expression for the primitives in $(0,+\infty)$ of
+	$$\frac{1}{x\sqrt{x+1}}$$
 \end{ExerciseList}
 
 \section{Integration}
 \begin{ExerciseList}
-	\Exercise Calculate the area of the following subset of $\mathbb R^2$
-	$$\{(x,y)\in\mathbb R^2 \colon x\le y\le -x^2+2\}$$
-
-	\Exercise Calculate the area of the region delimited by
-	$$\{ (x,y)\in\mathbb R^2 \colon 0\le x\le 1,\frac{\pi}{4}x\le y\le\arctan x \}$$
+	\Exercise Calculate the area of region delimited by:
+	\Question $\{(x,y)\in\mathbb R^2 \colon x\le y\le -x^2+2\}$
+	\Question $\{ (x,y)\in\mathbb R^2 \colon x^2-\pi x\le y \le -\sin{x} \}$
+	\Question $\{ (x,y)\in\mathbb R^2 \colon 0\le x\le 1,\frac{\pi}{4}x\le y\le\arctan x \}$
+	\Question The triangle described by the lines $y=x,\enspace y=2x,\enspace y=3x-2$
 
 	\Exercise Compute the following integrals
 	\Question $\int_0^{\frac{\pi}{2}}\frac{\sin x \cos x}{2+\sin^2x}dx$
 	\Question $\int_0^1{\frac{4x}{4+x^2}}dx$
 	\Question $\int_{\log 2}^{\log 3}{\frac{e^x}{(e^x-1)^2}}dx$
 	\Question $\int_1^2{\frac{1}{x(4+log^2(x))}}dx$
+	\Question $\int_{-1}^0\frac{\log(x+2)}{(x+2)^2}dx$
+	\Question $\int_0^1{(\frac{x}{2}+x^3)\arctan{x}}\: dx$
+	\Question $\int_1^{\log{2}}{\frac{e^x}{\sqrt{e^x - 1}}}dx$
 
 	\Exercise Determine the value of the constant $c\in\mathbb R$ such that $f'(0) = 0$, with
 	$$f(x)=\int_x^{cx+2}{e^{-t^2}}dt$$
 
-	\Exercise Compute the area of the region defined by
-	$$\{ (x,y)\in\mathbb R^2 \colon x^2-\pi x\le y \le -\sin{x} \}$$
+	\Exercise Let $g\in C(\mathbb R)$ be an odd function, and $f$ the function given by
+	$$f(x)=\int_1^{x^2-1}{xg(t)}dt$$
+	Calculate $f'(x)$ for any $x\in\mathbb R$, and show that $f'(0)=0$
+
 \end{ExerciseList}
 
 \section{Taylor Polynomial}
@@ -187,17 +219,26 @@
 	\Exercise Let $f\in C^4(\mathbb R)$ be such that its third degree Taylor
 	polynomial at point $2$ is constant. Given that $f^{(4)}(2)=1$, justify that
 	$f(2)$ is an extremum of $f$ and classify it.
+
+	\Exercise Let $h\colon \mathbb R \to \mathbb R$ be a differentiable function
+	, and consider $f\colon \mathbb R\to\mathbb R$ given by
+	$$f(x)=\int_x^{x^2}{h(t)}dt$$
+	\Question Show that $f''(1)-2f'(1)=3h'(1)$
+	\Question If $p_1(x)=x-1$ is the first order Taylor polynomial of $h$ at point $1$,
+	show that $f$ has a local minimum at $x=1$
 \end{ExerciseList}
 \section{Series}
 \begin{ExerciseList}
 	\Exercise Analyse the following series and determine whether they are absolutely convergent, conditionally convergent, or divergent
-	\Question $\sum_{n=1}^{+\infty}\frac{1}{3+2n}$
-	\Question $\sum_{n=1}^{+\infty}\frac{\cos(2n)}{n^3}$
-	\Question $\sum_{n=1}^{+\infty}\frac{n^3}{e^{2n}}$
-	\Question $\sum_{n=1}^{\infty}\frac{2+n\sqrt{n}}{1+3n^4}$
-	\Question $\sum_{n=2}^{\infty}\frac{3^n(1+(-1)^n)}{(2\pi)^{n+1}}$
+	\Question $\sum_{n=1}^{+\infty} \frac{1}{3+2n}$
+	\Question $\sum_{n=1}^{+\infty} \frac{\cos(2n)}{n^3}$
+	\Question $\sum_{n=1}^{+\infty} \frac{n^3}{e^{2n}}$
+	\Question $\sum_{n=1}^{\infty}  \frac{2+n\sqrt{n}}{1+3n^4}$
+	\Question $\sum_{n=2}^{\infty}  \frac{3^n(1+(-1)^n)}{(2\pi)^{n+1}}$
 	\Question $\sum_{n=2}^{+\infty} \log(\arctan(n+1))-\log(\arctan n)$
 	\Question $\sum_{n=2}^{+\infty} \frac{(-1)^n}{\sqrt[4]{n^3 + 1}}$
+	\Question $\sum_{n=1}^{\infty}  (\frac{n}{n+1} - \frac{n+1}{n+2})$
+	\Question $\sum_{n=0}^{\infty}  2^{-3n}$
 
 	\Exercise Show that if the series $\sum_{n=1}^{+\infty}a_n$ converges, then
 	$\sum_{n=1}^{+\infty}\frac{2n-1}{2n}$ also converges.
@@ -205,6 +246,7 @@
 	\Exercise Determine the values of $x\in\mathbb R$ for which the following series
 	is absolutely convergent, conditionally convergent, or divergent
 	\Question $\sum_{n=1}^{+\infty}\frac{n^n(x-1)^n}{(n+3)^n}$
+	\Question $\sum_{n=0}^{\infty}\frac{(x-2)^n}{\sqrt{n}+1}$
 \end{ExerciseList}
 
 \section{Proofs}
@@ -237,6 +279,19 @@
 	for all $x\in[0,1]$
 	$$\int_0^x{\int_0^u{f(t)}dt}du=\int_0^x{(x-t)f(t)}dt$$
 
+	\Exercise Let $f$ be a function integrable in $[0,1]$. Show that
+	$$\lim_{n\to\infty}\int_0^1{x^{n+1}f(x)}dx = 0$$
+
+	\Exercise Let $G\colon \mathbb R\to \mathbb R$ be a continuous function.
+	Suppose there is $m\in\mathbb R$ such that $\{ x\in\mathbb R\colon G(x)\le m \}$
+	is limited and not empty.
+	Show that $G$ has an absolute minimum.
+
+	\Exercise Let $g\colon \mathbb R \to \mathbb R$ be a continuous function such that
+	$$\lim_{x\to -\infty}g(x)=\alpha>0$$
+	Show that
+	$$\lim_{x\to -\infty}\int_x^0 e^{x-t}g(t)dt=\alpha$$
+	Hint: Show that $\lim_{x\to -\infty}\int_x^0 e^{-t}g(t)dt=+\infty$
 \end{ExerciseList}
 \section{Notation}
 \begin{enumerate}
