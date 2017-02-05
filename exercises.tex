@@ -118,7 +118,7 @@
 	\Question Calculate $\lim_{x\to -\infty}f(x)$ and $\lim_{x\to +\infty}f(x)$
 	\Question Justify whether $f$ is continuous
 	\Question Let $f'_+(0)=-2\alpha$, determine $\alpha$ such that $f$ is differentiable at $x=0$. Justify that $f$ is differentiable in $\mathbb R$ and calculate it's derivative
-	\Question Determine the local extremes and the monotonous intervals of $f$ (with $\alpha = 1/2$)
+	\Question Determine the local extrema and the monotonous intervals of $f$ (with $\alpha = 1/2$)
 	\Question Indicate the co-domain of $f$ (with $\alpha=1/2$)
 
 	\Exercise The function $h\colon \mathbb R \to \mathbb R$
@@ -139,7 +139,7 @@
 	\Question Calculate, if it exists in $\overline{\mathbb R}$, $\lim_{x\to +\infty}f(x)$
 	\Question Show that $f$ is continuous at the point $x=0$ and calculate,if it exists, $f'(0)$
 	\Question Determine the differentiability domain of $f$, and calculate it's derivative.
-	\Question Show that $f$ has one and only one local extreme on the interval $(-\infty, 0)$.
+	\Question Show that $f$ has one and only one local extremum on the interval $(-\infty, 0)$.
 	Prove that it's an absolute minimum of $f$ in $\mathbb R$.
 	\Question Show that the co-domain of $f$ is a closed and limited interval.
 \end{ExerciseList}
@@ -184,9 +184,9 @@
 	Let $3-x+2(x-1)^2$ be the second order Taylor polynomial of $f$ relative
 	to point $1$, determine the second order MacLaurin polynomial of $g$.
 
-	\Exercise Let $f\in C^4(\mathbb R)$ such that it's third degree Taylor
+	\Exercise Let $f\in C^4(\mathbb R)$ be such that its third degree Taylor
 	polynomial at point $2$ is constant. Given that $f^{(4)}(2)=1$, justify that
-	$f(2)$ is an extreme of $f$ and classify it.
+	$f(2)$ is an extremum of $f$ and classify it.
 \end{ExerciseList}
 \section{Series}
 \begin{ExerciseList}
@@ -215,7 +215,7 @@
 
 	\Exercise Let $h\in C(\mathbb R)$ such that $h(x) = h(x+2)$ for all $x\in\mathbb R$, and
 	$$\phi(x) = \int_0^x{h(t)dt}-\int_0^{x+2}{h(t)dt}$$
-	Prove that $\phi$ is identically null if and only if $\int_0^2 h(t)dt = 0$
+	Prove that $\phi$ is identically $0$ if and only if $\int_0^2 h(t)dt = 0$
 
 	\Exercise Let $(a_n)$ be a limited sequence with terms in $(1,+\infty)$, and
 	$(b_n)$ another sequence such that $$b_n = \frac{na_n}{n+a_n}\qquad n\in\mathbb N_1$$
@@ -233,7 +233,9 @@
 	$$\forall x\in(0,+\infty)\quad h'(x<1)$$
 	Show that $h(x)=\frac{x^2-1}{x}$ has one and only one solution
 
-	\Exercise
+	\Exercise Let $f\colon [0,1]\to\mathbb R$ be a continuous function. Show that
+	for all $x\in[0,1]$
+	$$\int_0^x{\int_0^u{f(t)}dt}du=\int_0^x{(x-t)f(t)}dt$$
 
 \end{ExerciseList}
 \section{Notation}
