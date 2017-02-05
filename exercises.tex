@@ -112,6 +112,9 @@
 	\Question $\lim_{x\to1+}\frac{\arctan(x-1)}{x^3-3x+2}$
 	\Question $\lim_{x\to 0}\frac{\arctan{2x}}{\tan x}$
 	\Question $\lim_{x\to +\infty}(2e^x + 1)^{\frac{1}{x}}$
+	\Question $\lim_{x\to 0}\frac{1-\cos{x}}{\arcsin{x}}$
+	\Question $\lim_{x\to 0} x(\log x)^2$
+	\Question $\lim_{x\to 0}\frac{2\int_0^x(1-e^{t^2})dt}{x^2}$
 \end{ExerciseList}
 
 \section{Functions}
@@ -161,6 +164,14 @@
 	\Question Calculate $\lim_{x\to -\infty}f(x)$ and $\lim_{x\to +\infty}f(x)$
 	\Question Decide whether $f$ extendable by continuity at $-\pi/2$ and $\pi/2$
 	\Question Calculate the derivative $f'$, and determine it's monotonous intervals.
+
+	\Exercise Consider the function $f\colon (-1,+\infty)\to\mathbb R$:
+	$$f(x)=\begin{cases}\log{\sqrt{1-x^2}}, & \mbox{if $-1<x\le 0$} \\ x^2e^{1-x^2}, & \mbox{if $x>0$} \\ \end{cases}$$
+	\Question Study $f$ with regards to continuity
+	\Question Calculate $\lim_{x\to -1^+}f(x)$ and $\lim_{x\to +\infty}f(x)$
+	\Question Determine the derivative $f'$
+	\Question Determine the monotony intervals of $f$, as well as the local maxima and minima.
+
 \end{ExerciseList}
 
 \section{Primitives}
@@ -173,6 +184,8 @@
 	\Question $\frac{3x}{\sqrt{4+x^2}}$
 	\Question $\frac{1}{x^2+4}$
 	\Question $\frac{\sin{\sqrt[3]{x}}}{\sqrt[3]{x}}$
+	\Question $\frac{\cos(\log x)}{x}$
+	\Question $\log(1+x)^2$
 
 	\Exercise Determine the function $g\colon \mathbb R \to \mathbb R$ that satisfies
 	$$\begin{cases}g'(x)=\frac{3x^2 + 1}{x^2 + 2} & \mbox{$\forall x\in \mathbb R$} \\ g(0)=2\end{cases}$$
@@ -200,6 +213,7 @@
 	\Question $\int_{-1}^0\frac{\log(x+2)}{(x+2)^2}dx$
 	\Question $\int_0^1{(\frac{x}{2}+x^3)\arctan{x}}\: dx$
 	\Question $\int_1^{\log{2}}{\frac{e^x}{\sqrt{e^x - 1}}}dx$
+	\Question $\int_2^7{\frac{1}{(x+1)\sqrt{x+2}}}dx$
 
 	\Exercise Determine the value of the constant $c\in\mathbb R$ such that $f'(0) = 0$, with
 	$$f(x)=\int_x^{cx+2}{e^{-t^2}}dt$$
@@ -207,6 +221,9 @@
 	\Exercise Let $g\in C(\mathbb R)$ be an odd function, and $f$ the function given by
 	$$f(x)=\int_1^{x^2-1}{xg(t)}dt$$
 	Calculate $f'(x)$ for any $x\in\mathbb R$, and show that $f'(0)=0$
+
+	\Exercise Determine a function $f\colon\mathbb R \to \mathbb R$, differentiable and non-null, such that
+	$$f^3(x)=\int_{\pi/2}^{x}{\frac{\cos{t}}{2-\sin{t}}}dt$$
 
 \end{ExerciseList}
 
@@ -227,6 +244,7 @@
 	\Question If $p_1(x)=x-1$ is the first order Taylor polynomial of $h$ at point $1$,
 	show that $f$ has a local minimum at $x=1$
 \end{ExerciseList}
+
 \section{Series}
 \begin{ExerciseList}
 	\Exercise Analyse the following series and determine whether they are absolutely convergent, conditionally convergent, or divergent
@@ -239,6 +257,9 @@
 	\Question $\sum_{n=2}^{+\infty} \frac{(-1)^n}{\sqrt[4]{n^3 + 1}}$
 	\Question $\sum_{n=1}^{\infty}  (\frac{n}{n+1} - \frac{n+1}{n+2})$
 	\Question $\sum_{n=0}^{\infty}  2^{-3n}$
+	\Question $\sum_{n=1}^{+\infty}\frac{\sqrt[3]{n^3+2}}{n^2\sqrt{n+9}}$
+	\Question $\sum_{n=1}^{+\infty}\frac{\arctan{n}}{e^n}$
+	\Question $\sum_{n=1}^{+\infty}(-1)^{n+1}\frac{\sin(2n)}{n^3}$
 
 	\Exercise Show that if the series $\sum_{n=1}^{+\infty}a_n$ converges, then
 	$\sum_{n=1}^{+\infty}\frac{2n-1}{2n}$ also converges.
@@ -247,6 +268,7 @@
 	is absolutely convergent, conditionally convergent, or divergent
 	\Question $\sum_{n=1}^{+\infty}\frac{n^n(x-1)^n}{(n+3)^n}$
 	\Question $\sum_{n=0}^{\infty}\frac{(x-2)^n}{\sqrt{n}+1}$
+	\Question $\sum_{n=1}^{\infty}\frac{\log n}{2^n}(x-2)^n$
 \end{ExerciseList}
 
 \section{Proofs}
@@ -292,6 +314,22 @@
 	Show that
 	$$\lim_{x\to -\infty}\int_x^0 e^{x-t}g(t)dt=\alpha$$
 	Hint: Show that $\lim_{x\to -\infty}\int_x^0 e^{-t}g(t)dt=+\infty$
+
+	\Exercise Let $\psi\colon\mathbb R \to \mathbb R$ be a continuous function
+	such that $\lim_{x\to +\infty}\psi(x)=+\infty$ and $\lim_{x\to -\infty}\psi(x)=-\infty$.
+	Decide if $G\colon\mathbb R \to \mathbb R$ defined as
+	$$G(x)=\frac{\psi(x)}{1+\psi^2(x)}$$
+	Has a maximum and a minimum.
+
+	\Exercise Show that if $\sum_{n=1}^{+\infty}a_n$ and $\sum_{n=1}^{+\infty}b_n$
+	are convergent series with positive terms, then $\sum_{n=1}^{+\infty}a_n b_n$
+	is a convergent series. Will this hold true if $\sum_{n=1}^{+\infty}a_n$ and $\sum_{n=1}^{+\infty}b_n$
+	are series with an oscillating sign?
+
+	\Exercise Let $I$ be an open interval, $a\in I$ and $\rho\colon I\to\mathbb R$
+	a function 2-times differentiable, such that $\rho''(x)>0$ for any $x\in I$. Also let
+	$$g(x)=\rho'(a)(x-a)+\rho(a)$$
+	Show that $\rho(x)>g(x)$ for all $x\in I\setminus\{ a \}$
 \end{ExerciseList}
 \section{Notation}
 \begin{enumerate}
