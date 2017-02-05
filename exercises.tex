@@ -105,6 +105,9 @@
 	\Question $\lim_{x\to +\infty}(3x^2+1)^{1/x}$
 	\Question $\lim_{x\to 1}\frac{x-1}{\tan(x-1)}$
 	\Question $\lim_{x\to 2}(x-1)^{\frac{1}{2-x}}$
+	\Question $\lim_{x\to -\infty}xe^{x^2}$
+	\Question $\lim_{x\to +\infty}(\log(2x))^{1/x}$
+	\Question $\lim_{x\to 1}\frac{1}{x-1}\int_0^{\log x}{e^{\sin t}}dt$
 \end{ExerciseList}
 
 \section{Functions}
@@ -130,6 +133,15 @@
 	\Question Show that $f$ is differentiable, and calculate $f'(x)\quad\forall x\in\mathbb R\setminus \{ 0\}$.
 	Use the result to determine the monotonous intervals of $f$
 	\Question Determine the co-domain of $f$
+
+	\Exercise Consider the function $f\colon \mathbb R\to \mathbb R$ such that
+	$$f(x)=\begin{cases}-x^2e^x, & \mbox{if $x\le 0$} \\ (1-\cos x)e^{-x} & \mbox{if $x>0$} \\ \end{cases}$$
+	\Question Calculate, if it exists in $\overline{\mathbb R}$, $\lim_{x\to +\infty}f(x)$
+	\Question Show that $f$ is continuous at the point $x=0$ and calculate,if it exists, $f'(0)$
+	\Question Determine the differentiability domain of $f$, and calculate it's derivative.
+	\Question Show that $f$ has one and only one local extreme on the interval $(-\infty, 0)$.
+	Prove that it's an absolute minimum of $f$ in $\mathbb R$.
+	\Question Show that the co-domain of $f$ is a closed and limited interval.
 \end{ExerciseList}
 
 \section{Primitives}
@@ -140,18 +152,30 @@
 	\Question $\frac{1}{\sqrt{e^x - 1}}$
 	\Question $\frac{3x}{1+x^4}$
 	\Question $\frac{3x}{\sqrt{4+x^2}}$
+
+	\Exercise Determine the function $g\colon \mathbb R \to \mathbb R$ that satisfies
+	$$\begin{cases}g'(x)=\frac{3x^2 + 1}{x^2 + 2} & \mbox{$\forall x\in \mathbb R$} \\ g(0)=2\end{cases}$$
 \end{ExerciseList}
 
 \section{Integration}
 \begin{ExerciseList}
 	\Exercise Calculate the area of the following subset of $\mathbb R^2$
 	$$\{(x,y)\in\mathbb R^2 \colon x\le y\le -x^2+2\}$$
+
 	\Exercise Calculate the area of the region delimited by
 	$$\{ (x,y)\in\mathbb R^2 \colon 0\le x\le 1,\frac{\pi}{4}x\le y\le\arctan x \}$$
+
 	\Exercise Compute the following integrals
 	\Question $\int_0^{\frac{\pi}{2}}\frac{\sin x \cos x}{2+\sin^2x}dx$
+	\Question $\int_0^1{\frac{4x}{4+x^2}}dx$
+	\Question $\int_{\log 2}^{\log 3}{\frac{e^x}{(e^x-1)^2}}dx$
+	\Question $\int_1^2{\frac{1}{x(4+log^2(x))}}dx$
+
 	\Exercise Determine the value of the constant $c\in\mathbb R$ such that $f'(0) = 0$, with
 	$$f(x)=\int_x^{cx+2}{e^{-t^2}}dt$$
+
+	\Exercise Compute the area of the region defined by
+	$$\{ (x,y)\in\mathbb R^2 \colon x^2-\pi x\le y \le -\sin{x} \}$$
 \end{ExerciseList}
 
 \section{Taylor Polynomial}
@@ -159,6 +183,10 @@
 	\Exercise Let $f\in C^2(\mathbb R)$ and $g(x)=f(e^x)\forall x\in\mathbb R$.
 	Let $3-x+2(x-1)^2$ be the second order Taylor polynomial of $f$ relative
 	to point $1$, determine the second order MacLaurin polynomial of $g$.
+
+	\Exercise Let $f\in C^4(\mathbb R)$ such that it's third degree Taylor
+	polynomial at point $2$ is constant. Given that $f^{(4)}(2)=1$, justify that
+	$f(2)$ is an extreme of $f$ and classify it.
 \end{ExerciseList}
 \section{Series}
 \begin{ExerciseList}
@@ -168,8 +196,15 @@
 	\Question $\sum_{n=1}^{+\infty}\frac{n^3}{e^{2n}}$
 	\Question $\sum_{n=1}^{\infty}\frac{2+n\sqrt{n}}{1+3n^4}$
 	\Question $\sum_{n=2}^{\infty}\frac{3^n(1+(-1)^n)}{(2\pi)^{n+1}}$
+	\Question $\sum_{n=2}^{+\infty} \log(\arctan(n+1))-\log(\arctan n)$
+	\Question $\sum_{n=2}^{+\infty} \frac{(-1)^n}{\sqrt[4]{n^3 + 1}}$
+
 	\Exercise Show that if the series $\sum_{n=1}^{+\infty}a_n$ converges, then
 	$\sum_{n=1}^{+\infty}\frac{2n-1}{2n}$ also converges.
+
+	\Exercise Determine the values of $x\in\mathbb R$ for which the following series
+	is absolutely convergent, conditionally convergent, or divergent
+	\Question $\sum_{n=1}^{+\infty}\frac{n^n(x-1)^n}{(n+3)^n}$
 \end{ExerciseList}
 
 \section{Proofs}
@@ -189,6 +224,17 @@
 	\Exercise Let $f$ and $g$ be real functions, defined and continuous on the interval $[a,b]$, such that
 	$$\int_a^b{f(t)}dt = 2\int_a^b{g(t)}dt$$
 	Show that there is $c\in[a,b]$ such that $f(c)=2g(c)$
+
+	\Exercise Let $h\colon [0,+\infty)\to\mathbb R$ be a continuous function
+	for which $\lim_{x\to +\infty}h(x)=c\in\mathbb R$.
+	\Question Show that there is at least one solution for $h(x)=\frac{x^2-1}{x}$
+	in the interval $(0,+\infty)$
+	\Question Suppose $h$ is differentiable in $(0,+\infty)$ and
+	$$\forall x\in(0,+\infty)\quad h'(x<1)$$
+	Show that $h(x)=\frac{x^2-1}{x}$ has one and only one solution
+
+	\Exercise
+
 \end{ExerciseList}
 \section{Notation}
 \begin{enumerate}
