@@ -7,6 +7,7 @@
 \renewcommand{\QuestionNB}{(\alph{Question})\ }
 
 \begin{document}
+
 \section{Induction Proofs}
 \begin{ExerciseList}
     \Exercise
@@ -71,6 +72,98 @@
     \]
     Show that
     $$a_n=\frac{3^{n-1}}{n!}\quad\quad\forall n\ge 1$$
-
 \end{ExerciseList}
+
+\section{Limits I}
+\begin{ExerciseList}
+    \Exercise Calculate or show that it does not exist in $\overline{\mathbb R}$
+    \Question $\lim \frac{(n+1)!-n!}{n!(n+2)}$
+    \Question $\lim (-1)^n \frac{10^n}{n!}$
+    \Question $\lim \frac{5n!+5n}{n^n + 2}$
+    \Question $\lim \sqrt{\frac{e^n+2}{n!}}$
+    \Question $\lim \frac{(-1)^n n}{n!+4}$
+    \Question $\lim \frac{\sqrt[3]{n+4}}{\sqrt[3]{n}+4}$
+    \Question $\lim \sqrt[n]{\frac{n+2^n}{2+5^n}}$
+    \Question $\lim \frac{3n^4-2n}{(n^2 + 3)(1+5n^2)}$
+    \Question $\lim (\frac{2}{3}+\cos(3n\pi))^n$
+    \Question $\lim \frac{3+\cos(e^{-n})}{n+\sqrt{n!}}$
+    \Question $\lim \frac{(-1)^n n }{n! + 5}$
+    \Question $\lim \frac{\cos{(n\pi)}}{\sin{(1/n\pi)}+1}$
+    \Question $\lim \frac{e^{3n}+1}{2^n+n^2}$
+    \Question $\lim \frac{\sqrt{n} + n^3}{(n+\sqrt{n})(n^2 + n^{3/2})}$
+    \Question $\lim (\cos{(\frac{\pi}{4}+n\pi)}+1)^n$
+    \Question $\lim \frac{(3n)!}{n!(2n)!}$
+    \Question $\lim \frac{\arccos(1/n)}{\cos(\pi/n)}$
+    \Question $\lim \frac{2n! + 3^n}{n^{50} + n!}$
+    \Question $\lim \sqrt[n]{\frac{\arctan n}{1+e^n}}$
+\end{ExerciseList}
+
+\section{Limits II}
+\begin{ExerciseList}
+    \Exercise Calculate or show that it does not exist in $\overline{\mathbb R}$
+    \Question $\lim_{x\to 0}\frac{e^x - 1}{x-e^{3x} + 1}$
+    \Question $\lim_{x\to +\infty}(3x^2+1)^{1/x}$
+\end{ExerciseList}
+
+\section{Functions}
+\begin{ExerciseList}
+    \Exercise Consider the function $f\colon \mathbb R \to \mathbb R$
+    $$f(x) = \begin{cases} -x e^x, & \mbox{if $x<0$} \\ \alpha\arctan(x^2-2x), &\mbox{if $x\ge 0$} \\ \end{cases}$$
+    Where $\alpha$ is a real constant.
+    \Question Calculate $\lim_{x\to -\infty}f(x)$ and $\lim_{x\to +\infty}f(x)$
+    \Question Justify whether $f$ is continuous
+    \Question Let $f'_+(0)=-2\alpha$, determine $\alpha$ such that $f$ is differentiable at $x=0$. Justify that $f$ is differentiable in $\mathbb R$ and calculate it's derivative
+    \Question Determine the local extremes and the monotonous intervals of $f$ (with $\alpha = 1/2$)
+    \Question Indicate the co-domain of $f$ (with $\alpha=1/2$)
+
+    \Exercise The function $h\colon \mathbb R \to \mathbb R$
+    $$h(x)=\begin{cases}x^2, & \mbox{if $x\in\mathbb Q$} \\ 0, & \mbox{if $x\in\mathbb R\setminus\mathbb Q$}\end{cases}$$
+    is continuous at only one point. Is it differentiable at that point?
+\end{ExerciseList}
+
+\section{Primitives}
+\begin{ExerciseList}
+    \Exercise Calculate the primitive of the function $$\frac{2x+3}{x^2+2}$$ that vanishes at $x=0$
+
+    \Exercise Determine a primitive for the following functions:
+    \Question $\frac{1}{\sqrt{e^x - 1}}$
+\end{ExerciseList}
+
+\section{Integration}
+\begin{ExerciseList}
+    \Exercise Calculate the area of the following subset of $\mathbb R^2$
+    $$\{(x,y)\in\mathbb R^2 \colon x\le y\le -x^2+2\}$$
+\end{ExerciseList}
+
+\section{Taylor Polynomial}
+\begin{ExerciseList}
+    \Exercise Let $f\in C^2(\mathbb R)$ and $g(x)=f(e^x)\forall x\in\mathbb R$.
+    Let $3-x+2(x-1)^2$ be the second order Taylor polynomial of $f$ relative
+    to point $1$, determine the second order MacLaurin polynomial of $g$.
+\end{ExerciseList}
+\section{Series}
+\begin{ExerciseList}
+    \Exercise Analyse the following series and determine whether they are absolutely convergent, conditionally convergent, or divergent
+    \Question $\sum_{n=1}^{+\infty}\frac{1}{3+2n}$
+    \Question $\sum_{n=1}^{+\infty}\frac{\cos(2n)}{n^3}$
+    \Question $\sum_{n=1}^{+\infty}\frac{n^3}{e^{2n}}$
+    \Exercise Show that if the series $\sum_{n=1}^{+\infty}a_n$ converges, then
+    $\sum_{n=1}^{+\infty}\frac{2n-1}{2n}$ also converges.
+\end{ExerciseList}
+
+\section{Proofs}
+\begin{ExerciseList}
+    \Exercise Show that for any $x>0$
+    $$\frac{x}{1+x} < \log(1+x) < x$$
+    Hint: Mean Value Theorem
+
+    \Exercise Let $h\in C(\mathbb R)$ such that $h(x) = h(x+2)$ for all $x\in\mathbb R$, and
+    $$\phi(x) = \int_0^x{h(t)dt}-\int_0^{x+2}{h(t)dt}$$
+    Prove that $\phi$ is identically null if and only if $\int_0^2 h(t)dt = 0$
+\end{ExerciseList}
+\section{Notation}
+\begin{enumerate}
+    \item  $[a,b]$ for a closed interval, $(a,b)$ for an open one.
+    \item $\overline{\mathbb R} = \mathbb R \cup \{-\infty, +\infty\}$
+\end{enumerate}
 \end{document}
